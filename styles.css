@@ -1,5 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
 .content {
   width: 50%;
   max-width: 480px;
   margin: 48px auto;
+
+  font-family: 'Raleway', Helvetica, Arial; 
+}
+
+small {
+  font-size: .8em;
+  font-style: italic;
+  color: #444;
 }

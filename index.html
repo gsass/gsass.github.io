@@ -1,14 +1,18 @@
 <html>
   <head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.1/vue.js"></script>
+  <script src="src/bio.js"></script>
     <link rel="stylesheet" href="styles.css">
   </head>
   
   <body>
-    <div class="content">
-      <p>I'm George. I make software, usually to make the internal tools and web store at Warby Parker better. Currently I work across our Python/JS(+ React/Redux)/PSQL/AWS stack. Yep, I wear glasses.</p>
-      <p>Previously I developed new features to make an Electronic Health Health Record solution more performant and accessible. Before that, I wrote code to run robots and test sensors. I still like hardware a bunch.</p>
+    <div class="content" id="app">
+      <p>I'm George. I make software, usually to make the internal tools and web store at <a href="https://www.warbyparker.com">Warby Parker</a> better. Currently I work across our <small>(Python/JS–ES6,&nbsp;React,&nbsp;Redux, mostly/PSQL/AWS)</small> web stack. Yep, I wear glasses.</p>
+      <p>Before glasses, I worked on making <a href="https://www.vecna.com/">Electronic Health Health Records</a> more useful and accessible. Wacy back when, I wrote code to run robots and test sensors. I still like hardware a bunch.</p>
       <p>Outside of work, I like to make stuff, mostly food, bikes, and ceramics. I also like riding the bikes.</p>
       <p>I have cat. His name's Lorenzo.</p>
+
+      <span>{{ emoji }}</span>
     </div>
   </body>
 
