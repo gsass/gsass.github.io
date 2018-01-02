@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Pavanam');
+
+h1,h2,h3 {
+  font-family: Garamond;
+}
+
+h3 {
+  display: inline-block;
+  margin: 0;
+}
+
+h2 {
+  margin: 10px 20px 0;
+}
+
+dl {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-bottom: 0;
+}
+
+dt {
+  flex: 0 0 25%;
+  border-right: solid 1px #BBB;
+}
+
+dd {
+  flex: 70% 0 0;
+  padding-left: 20px;
+  margin-left: 0;
+}
+
+dt,dd {
+  margin-bottom: 10px;
+  align-items: flex-start;
+}
+
+dd ul {
+  margin: 6px 0 0;
+}
+
+.row {
+  display: flex;
+  padding: 0 20px;
+  font-family: 'Pavanam', Helvetica, Arial; 
+}
+
+.education {
+  padding: 16px 20px 10px;
+}
+
+.col {
+  vertical-align: top;
+}
+
+.skills {
+  justify-content: space-around;
+  font-size: 16;
+}
+
+ul {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+.skillset li:first-child {
+  text-decoration: underline;
+}
+
+.footnote {
+  float: right;
+  padding-right: 5%;
+  margin-bottom: 10px;
+}
+
+.header {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title, .contact {
+  margin: 0;
+  display: inline-block;
+  text-align: right;
+}
+
