@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import Markdown from './components/markdown';
-import Navigation from './components/navigation';
+// import Navigation from './components/navigation';
+
+require('../css/styles.css');
 
 window.onload = function () {
   var app = new Vue({
