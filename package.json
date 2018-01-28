@@ -7,12 +7,18 @@
   "author": "George Sass <george.a.sass@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "css-loader": "^0.28.9",
     "marked": "^0.3.6",
-    "vue": "^2.4.2",
-    "webpack": "^3.5.6"
+    "style-loader": "^0.20.1",
+    "vue": "^2.4.2"
   },
   "scripts": {
     "build": "webpack -p",
     "watch": "webpack --watch"
+  },
+  "devDependencies": {
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
+    "webpack": "^3.10.0"
   }
 }
