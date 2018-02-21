@@ -1,11 +1,14 @@
 import Markdown from '../markdown';
-// import Navigation from './navigation';
+import Navigation from '../navigation';
 
 const Bio = {
   linkName: 'Me',
 
+  props: ['routes','test'],
+
   components: {
-    markdown: Markdown
+    markdown: Markdown,
+    navigation: Navigation,
   },
 
   template: `
@@ -16,7 +19,7 @@ const Bio = {
       </div>
     </span>`,
 
-  data: function () {
+  data () {
     return {
       bio: `
 I'm George. I make software, usually to make the internal tools and web store at [Warby Parker](https://www.warbyparker.com) better. Currently I work across our <small>(Python/JS–ES6,&nbsp;React,&nbsp;Redux, PSQL, AWS)</small> web stack. Yep, I wear glasses.

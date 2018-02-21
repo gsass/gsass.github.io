@@ -1,11 +1,12 @@
 import Markdown from '../markdown';
-// import Navigation from './navigation';
+import Navigation from '../navigation';
 
 const Blog = {
   linkName: 'Words',
 
   components: {
-    markdown: Markdown
+    markdown: Markdown,
+    navigation: Navigation,
   },
 
   template: `

@@ -1,11 +1,12 @@
 import Markdown from '../markdown';
-// import Navigation from './navigation';
+import Navigation from '../navigation';
 
 const Resume = {
   linkName: 'Clout',
 
   components: {
-    markdown: Markdown
+    markdown: Markdown,
+    navigation: Navigation,
   },
 
   template: `
