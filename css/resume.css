@@ -42,8 +42,8 @@ dt,dd {
   align-items: flex-start;
 }
 
-dd ul {
-  margin: 6px 0 0;
+dd p {
+  margin: 0 0 8px 0;
 }
 
 .row {
