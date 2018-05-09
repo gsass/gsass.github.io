@@ -3,6 +3,7 @@ import Vue from 'vue';
 import Bio from './components/pages/bio'
 import Resume from './components/pages/resume'
 import Blog from './components/pages/blog'
+import {Events} from './components/navigation'
 
 require('../css/styles.css');
 
@@ -19,12 +20,11 @@ window.onload = function () {
     computed: {
       currentRoute: {
         get: function () {
-          window.location.hash || '#me'
+          return window.location.hash || '#me'
         },
-        set: function (route) {
-          console.log('wow');
-          this.page = routes[route] // TODO 404 page` || NotFound`
-        }
+        // set: function (route) {
+        //   this.page = routes[route] // TODO 404 page` || NotFound`
+        // }
       },
       page () {
         return Bio;
@@ -35,16 +35,15 @@ window.onload = function () {
     },
 
     methods: {
-      onHashChange: (function (evt) {
-        this.currentRoute = evt.newURL.includes('#') ? evt.newURL.split('#')[1] : '#me'
-      }).bind(this)
+      onHashChange: function (newHash) {
+        this.currentRoute = newHash.slice(1);
+        // evt.newURL.includes('#') ? evt.newURL.split('#')[1] : '#me'
+        // console.log(evt.newURL)
+      }
     },
 
-    mounted () {
-      this.$nextTick( function () {
-        window.addEventListener('hashchange', this.onHashChange);
-        this.onHashChange();
-      });
+    created () {
+      Events.$on('navigate', this.onHashChange);
     },
 
     render (h) {
