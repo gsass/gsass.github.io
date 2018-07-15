@@ -3,7 +3,7 @@ import Vue from 'vue';
 import Bio from './components/pages/bio'
 import Resume from './components/pages/resume'
 import Blog from './components/pages/blog'
-import {Events} from './components/navigation'
+import Navigation from './components/navigation'
 
 require('../css/styles.css');
 
@@ -12,42 +12,43 @@ const routes = {
   '#resume': Resume,
   '#blog': Blog,
 };
+// Set up router.
+const events = new Vue()
 
 window.onload = function () {
+  // Set up app.
   var app = new Vue({
     el: '#app',
 
-    computed: {
-      currentRoute: {
-        get: function () {
-          return window.location.hash || '#me'
-        },
-        // set: function (route) {
-        //   this.page = routes[route] // TODO 404 page` || NotFound`
-        // }
-      },
-      page () {
-        return Bio;
-      },
-      pageProps () {
-        return {routes: routes}
-      },
-    },
-
-    methods: {
-      onHashChange: function (newHash) {
-        this.currentRoute = newHash.slice(1);
-        // evt.newURL.includes('#') ? evt.newURL.split('#')[1] : '#me'
-        // console.log(evt.newURL)
-      }
-    },
-
-    created () {
-      Events.$on('navigate', this.onHashChange);
-    },
-
-    render (h) {
-      return h(this.page, {props: this.pageProps});
-    }
+    render: create => create(App),
   });
+}
+
+const App = {
+  template: `
+    <span>
+      <navigation :routes="routes" :events="events"></navigation>
+      <div class="content">
+        <component :is="page"></component>
+      </div>
+    </span>`,
+
+  components: { 
+    navigation: Navigation,
+  },
+
+  created() {
+    this.page = routes[this.getCurrentRoute()];
+    events.$on('navigate', () => {
+      console.log(`Navigating to ${this.getCurrentRoute()}`);
+      this.page = routes[this.getCurrentRoute()];
+    });
+  },
+
+  data: () => { return { events: events, page: {}, routes: routes}; },
+
+  methods: {
+    getCurrentRoute() { return window.location.hash || '#me'; },
+  },
+
 };

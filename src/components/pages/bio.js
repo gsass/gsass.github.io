@@ -1,23 +1,13 @@
 import Markdown from '../markdown';
-import Navigation from '../navigation';
 
 const Bio = {
   linkName: 'Me',
 
-  props: ['routes','test'],
-
   components: {
     markdown: Markdown,
-    navigation: Navigation,
   },
 
-  template: `
-    <span>
-      <navigation :routes="routes"></navigation>
-      <div class="content">
-        <markdown :raw="bio"></markdown>
-      </div>
-    </span>`,
+  template: `<markdown :raw="bio"></markdown>`,
 
   data () {
     return {

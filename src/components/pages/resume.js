@@ -1,21 +1,18 @@
 import Markdown from '../markdown';
-import Navigation from '../navigation';
 
 const Resume = {
+  props: ['routes'],
+
   linkName: 'Clout',
+  template: `<markdown :raw="resume"></markdown>`,
 
   components: {
     markdown: Markdown,
-    navigation: Navigation,
   },
 
-  template: `
-    <span>
-      <navigation :routes="routes"></navigation>
-      <div class="content">
-        <markdown :raw="resume"></markdown>
-      </div>
-    </span>`
+  data: () => {return {
+    resume: 'content here',
+  }; },
 }
 
 export default Resume;

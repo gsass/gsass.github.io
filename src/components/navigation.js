@@ -1,8 +1,5 @@
-import Vue from 'vue';
-
-const Events = new Vue()
 const Navigation = {
-  props: ['routes'],
+  props: ['routes', 'events'],
 
   template: `
     <ul class="nav">
@@ -16,7 +13,7 @@ const Navigation = {
     onClickLink: function (evt) {
       evt.preventDefault()
       window.history.pushState(null, null, evt.target.hash);
-      Events.$emit('navigate', evt.target.hash);
+      this.events.$emit('navigate', evt.target.hash);
     },
   },
 
@@ -28,4 +25,3 @@ const Navigation = {
 }
 
 export default Navigation;
-export {Events};
