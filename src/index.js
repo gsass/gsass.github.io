@@ -26,12 +26,12 @@ window.onload = function () {
 
 const App = {
   template: `
-    <span>
+    <div id='container'>
       <navigation :routes="routes" :events="events"></navigation>
       <div class="content">
         <component :is="page"></component>
       </div>
-    </span>`,
+    </div>`,
 
   components: { 
     navigation: Navigation,

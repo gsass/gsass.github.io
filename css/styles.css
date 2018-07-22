@@ -1,15 +1,39 @@
 @import 'type.css';
 
+#container {
+  margin: 72px 10% 0;
+  display: flex;
+  align-items: center;
+}
+
 .content {
-  width: 50%;
   max-width: 480px;
   margin: 48px auto;
-
-  font-family: 'Pavanam', Helvetica, Arial; 
+  padding-left: 20px;
+  font-family: 'Pavanam', Helvetica, Arial;
+  border-left: solid 1px #A1A4A8;
 }
 
 small {
   font-size: .8em;
   font-style: italic;
   color: #444;
+}
+
+.nav {
+  padding: 0;
+  list-style: none;
+}
+
+.nav li {
+  line-height: 28px;
+}
+
+.nav li a {
+  /* display: inline-block; */
+  font-family: Palatino;
+  color: #444;
+  font-size: 1.2em;
+  font-weight: 600;
+  text-decoration: none;
 }

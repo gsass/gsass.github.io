@@ -4,7 +4,7 @@ const Navigation = {
   template: `
     <ul class="nav">
       <li v-for="(page, route) in routes">
-        <a :href="route" @click="onClickLink">{{page.linkName}}</a>
+        <a :href="route" v-bind:class="isActive(page)" @click="onClickLink">{{page.linkName}}</a>
       </li>
     </ul>
   `,
@@ -15,6 +15,10 @@ const Navigation = {
       window.history.pushState(null, null, evt.target.hash);
       this.events.$emit('navigate', evt.target.hash);
     },
+
+    isActive: function (page) {
+      return (page == this.currentRoute);
+    }
   },
 
   data: function () {
