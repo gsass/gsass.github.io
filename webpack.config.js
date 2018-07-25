@@ -19,6 +19,18 @@ module.exports = {
       }, {
         loader: "sass-loader" // compiles Sass to CSS
       }]
+    },
+    {
+      test: /\.md$/,
+      use: [{
+        loader: "html-loader"
+      },
+      {
+        loader: "markdown-loader",
+        options: {
+          /* your options here */
+        }
+      }]
     }]
   },
 };

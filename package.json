@@ -8,6 +8,8 @@
   "license": "MIT",
   "dependencies": {
     "css-loader": "^0.28.9",
+    "html-loader": "^0.5.5",
+    "markdown-loader": "^3.0.0",
     "marked": "^0.3.6",
     "style-loader": "^0.20.1",
     "vue": "^2.4.2"

@@ -1,4 +1,5 @@
 import Markdown from '../markdown';
+const resumeContent = require('../../../content/resume.md');
 
 const Resume = {
   props: ['routes'],
@@ -11,7 +12,7 @@ const Resume = {
   },
 
   data: () => {return {
-    resume: 'content here',
+    resume: resumeContent,
   }; },
 }
 
