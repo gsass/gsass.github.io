@@ -2,10 +2,8 @@ import Markdown from '../markdown';
 const resumeContent = require('../../../content/resume.md');
 
 const Resume = {
-  props: ['routes'],
-
-  linkName: 'Clout',
-  template: `<markdown :raw="resume"></markdown>`,
+  linkName: 'My Resume',
+  template: `<markdown class="resume" :raw="resume"></markdown>`,
 
   components: {
     markdown: Markdown,

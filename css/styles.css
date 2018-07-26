@@ -3,7 +3,6 @@
 #container {
   margin: 72px 10% 0;
   display: flex;
-  align-items: center;
 }
 
 .content {
@@ -21,19 +20,19 @@ small {
 }
 
 .nav {
-  padding: 0;
+  padding: 24px 0;
   list-style: none;
-}
 
-.nav li {
-  line-height: 28px;
-}
+  li {
+    line-height: 28px;
 
-.nav li a {
-  /* display: inline-block; */
-  font-family: Palatino;
-  color: #444;
-  font-size: 1.2em;
-  font-weight: 600;
-  text-decoration: none;
+    a {
+      /* display: inline-block; */
+      font-family: Palatino;
+      color: #444;
+      font-size: 1.2em;
+      font-weight: 600;
+      text-decoration: none;
+    }
+  }
 }
