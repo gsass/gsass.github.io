@@ -2,7 +2,7 @@ import Markdown from '../markdown';
 import Navigation from '../navigation';
 
 const Blog = {
-  linkName: 'Words',
+  linkName: 'Writing',
 
   components: {
     markdown: Markdown,
